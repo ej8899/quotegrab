@@ -22,8 +22,7 @@ async function getQuote() {
       throw Error(response.statusText);
     }
     const json = await response.json();
-    displayQuote(json.message);
-		setTweetButton(json.message);
+    displayQuote(json.message+' - D.J.T.');
   } catch {
     alert('Failed to fetch new quote');
   } finally {
